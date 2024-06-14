@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¿Cuántos días a la semana haces ejercicio?"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_marginBottom="16dp" />
+
+    <RadioGroup
+        android:id="@+id/grupo_dias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <RadioButton
+            android:id="@+id/opcion_todos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Todos" />
+
+        <RadioButton
+            android:id="@+id/opcion_cinco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cinco" />
+
+        <RadioButton
+            android:id="@+id/opcion_tres"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tres" />
+
+        <RadioButton
+            android:id="@+id/opcion_uno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uno" />
+
+        <RadioButton
+            android:id="@+id/opcion_ninguno"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ninguno" />
+    </RadioGroup>
+
+    <!-- Agrega los SwitchMaterial aquí -->
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_italic_format"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Italic Text"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.switchmaterial.SwitchMaterial
+        android:id="@+id/switch_highlighted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Highlighted Text"
+        android:layout_gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:elevation="4dp"
+        android:padding="8dp"
+        android:layout_marginBottom="16dp" />
+</LinearLayout>
