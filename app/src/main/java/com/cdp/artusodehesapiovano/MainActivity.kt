@@ -1,19 +1,33 @@
 package com.cdp.artusodehesapiovano
 
-import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
-import android.widget.RadioButton
-import android.widget.RadioGroup
+import android.widget.ArrayAdapter
+import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
 
-class ActividadPrincipal : AppCompatActivity() {
-    @SuppressLint("MissingInflatedId")
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.actividad_principal)
+        setContentView(R.layout.activity_main)
 
-        val contenedor: RadioGroup = findViewById(R.id.grupo_dias)
-        val opcionI2: RadioButton = contenedor.getChildAt(2) as RadioButton
-        opcionI2.isChecked = true
+        val listView: ListView = findViewById(R.id.listView)
+
+        // Definiendo los dos ítems de la lista
+        val items = arrayOf("Ejemplo1", "Ejemplo2")
+
+        // Creando el ArrayAdapter
+        val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)
+
+        // Asignando el adaptador al ListView
+        listView.adapter = adapter
+
+        // Configurando el listener para los clics en los ítems del ListView
+        listView.setOnItemClickListener { _, _, position, _ ->
+            when (position) {
+                0 -> startActivity(Intent(this, Ejemplo1::class.java))
+                1 -> startActivity(Intent(this, Ejemplo2::class.java))
+            }
+        }
     }
 }

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="textView" type="id">textView</item>
+    <item name="switch_italic_format" type="id">switch_italic_format</item>
+    <item name="switch_color" type="id">switch_color</item>
+    <item name="grupo_dias" type="id">grupo_dias</item>
+</resources>

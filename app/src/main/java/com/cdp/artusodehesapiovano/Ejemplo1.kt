@@ -3,25 +3,47 @@ package com.cdp.artusodehesapiovano
 import android.annotation.SuppressLint
 import android.graphics.Typeface
 import android.os.Bundle
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.TextView
+import android.widget.Button
+import android.content.Intent
 import androidx.annotation.ColorRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import com.google.android.material.switchmaterial.SwitchMaterial
 
-class MainActivity : AppCompatActivity() {
+class Ejemplo1 : AppCompatActivity() {
     private lateinit var text: TextView
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.actividad_principal)
+        setContentView(R.layout.ejemplo1)
+
+        val buttonBack: Button = findViewById(R.id.buttonBack1)
+        buttonBack.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
+        }
+
+        val buttonKotlin: Button = findViewById(R.id.buttonKotlin)
+        buttonKotlin.setOnClickListener {
+            startActivity(Intent(this, ImageEj1Ko::class.java))
+        }
+
+        val buttonXml: Button = findViewById(R.id.buttonXml)
+        buttonXml.setOnClickListener {
+            startActivity(Intent(this, ImageEj1Xm::class.java))
+        }
+
+
+
 
         text = findViewById(R.id.textView)
 
         setupItalicSwitch()
-
         setupHighlightedSwitch()
+        setupRadioGroup()
     }
 
     private fun setupItalicSwitch() {
@@ -34,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupHighlightedSwitch() {
-        val colorSwitch: SwitchMaterial = findViewById(R.id.switch_highlighted)
+        val colorSwitch: SwitchMaterial = findViewById(R.id.switch_color)
 
         colorSwitch.setOnCheckedChangeListener { _, isChecked ->
             val colorRes = if (isChecked) R.color.green_500 else R.color.black
@@ -44,5 +66,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun getColorValue(@ColorRes colorRes: Int): Int {
         return ContextCompat.getColor(this, colorRes)
+    }
+
+    private fun setupRadioGroup() {
+        val contenedor: RadioGroup = findViewById(R.id.grupo_dias)
+        val opcionI2: RadioButton = contenedor.getChildAt(2) as RadioButton
+        opcionI2.isChecked = true
     }
 }
