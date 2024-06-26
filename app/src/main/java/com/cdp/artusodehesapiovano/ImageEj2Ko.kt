@@ -12,7 +12,7 @@ class ImageEj2Ko : AppCompatActivity() {
 
         val buttonBack: Button = findViewById(R.id.buttonBack)
         buttonBack.setOnClickListener {
-            startActivity(Intent(this, Ejemplo1::class.java))
+            startActivity(Intent(this, Ejemplo2::class.java))
         }
     }
 }

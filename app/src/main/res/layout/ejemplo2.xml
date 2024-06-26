@@ -7,7 +7,7 @@
     tools:context=".Ejemplo2">
 
     <CheckBox
-        android:id="@+id/seleccion_direccion_envio"
+        android:id="@+id/checkbox_marcado"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -18,7 +18,7 @@
         android:id="@+id/toggleButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/seleccion_direccion_envio"
+        android:layout_below="@id/checkbox_marcado"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"

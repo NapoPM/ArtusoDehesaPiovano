@@ -11,7 +11,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 
 class Ejemplo2 : AppCompatActivity() {
-    private lateinit var seleccionDireccion: CheckBox
+    private lateinit var checkboxSeleccion: CheckBox
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,7 +36,7 @@ class Ejemplo2 : AppCompatActivity() {
 
 
 
-        seleccionDireccion = findViewById(R.id.seleccion_direccion_envio)
+        checkboxSeleccion = findViewById(R.id.checkbox_marcado)
 
         val toggle: ToggleButton = findViewById(R.id.toggleButton)
         toggle.setOnCheckedChangeListener { _, isChecked ->
@@ -46,6 +46,6 @@ class Ejemplo2 : AppCompatActivity() {
     }
 
     fun loguearCheckbox(v: View) {
-        val estado = if (seleccionDireccion.isChecked) "Marcado" else "No Marcado"
+        val estado = if (checkboxSeleccion.isChecked) "Marcado" else "No Marcado"
         Toast.makeText(this, "Estado: $estado", Toast.LENGTH_LONG).show() }
 }
