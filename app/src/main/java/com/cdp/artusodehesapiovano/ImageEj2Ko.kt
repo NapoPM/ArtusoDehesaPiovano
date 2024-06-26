@@ -10,6 +10,7 @@ class ImageEj2Ko : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.image_ej2_ko)
 
+        //boton para volver
         val buttonBack: Button = findViewById(R.id.buttonBack)
         buttonBack.setOnClickListener {
             startActivity(Intent(this, Ejemplo2::class.java))

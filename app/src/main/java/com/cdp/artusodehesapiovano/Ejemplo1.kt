@@ -26,11 +26,13 @@ class Ejemplo1 : AppCompatActivity() {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
+        //boton para ir a la intefaz siguiente (ver codigo kotlin)
         val buttonKotlin: Button = findViewById(R.id.buttonKotlin)
         buttonKotlin.setOnClickListener {
             startActivity(Intent(this, ImageEj1Ko::class.java))
         }
 
+        //boton para ir a la intefaz siguiente (ver codigo xml)
         val buttonXml: Button = findViewById(R.id.buttonXml)
         buttonXml.setOnClickListener {
             startActivity(Intent(this, ImageEj1Xm::class.java))

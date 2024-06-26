@@ -18,16 +18,19 @@ class Ejemplo2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ejemplo2)
 
+        //boton para volver
         val buttonBack: Button = findViewById(R.id.buttonBack2)
         buttonBack.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
         }
 
+        //boton para ir a la intefaz siguiente (ver codigo kotlin)
         val buttonKotlin: Button = findViewById(R.id.buttonKotlin)
         buttonKotlin.setOnClickListener {
             startActivity(Intent(this, ImageEj2Ko::class.java))
         }
 
+        //boton para ir a la intefaz siguiente (ver codigo xml)
         val buttonXml: Button = findViewById(R.id.buttonXml)
         buttonXml.setOnClickListener {
             startActivity(Intent(this, ImageEj2Xm::class.java))
@@ -40,11 +43,12 @@ class Ejemplo2 : AppCompatActivity() {
 
         val toggle: ToggleButton = findViewById(R.id.toggleButton)
         toggle.setOnCheckedChangeListener { _, isChecked ->
-            Toast.makeText(this, if (isChecked) "Geek Mode ON" else "Geek Mode OFF", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, if (isChecked) "Boton ON" else "Boton OFF", Toast.LENGTH_SHORT).show()
         }
 
     }
 
+    //mensaje de estado de checkbox
     fun loguearCheckbox(v: View) {
         val estado = if (checkboxSeleccion.isChecked) "Marcado" else "No Marcado"
         Toast.makeText(this, "Estado: $estado", Toast.LENGTH_LONG).show() }
