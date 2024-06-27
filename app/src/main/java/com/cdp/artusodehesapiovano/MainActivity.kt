@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         val listView: ListView = findViewById(R.id.listView)
 
         // Definiendo los dos ítems de la lista
-        val items = arrayOf("Ejemplo1", "Ejemplo2")
+        val items = arrayOf("Ejemplo 1 (RadioButton-RadioGroup-Switch)", "Ejemplo 2 (Checkbox-ToggleButton)")
 
         // Creando el ArrayAdapter
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, items)
