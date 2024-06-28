@@ -18,7 +18,7 @@ class Ejemplo2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ejemplo2)
 
-        //boton para volver
+        //boton para volver a la interfaz principal
         val buttonBack: Button = findViewById(R.id.buttonBack2)
         buttonBack.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
