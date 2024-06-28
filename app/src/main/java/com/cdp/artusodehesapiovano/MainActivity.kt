@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 //En esta clase mostramos en una lista los 2 ejemplos.
 class MainActivity : AppCompatActivity() {
+    // Inicializa la actividad y establece el diseño
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
