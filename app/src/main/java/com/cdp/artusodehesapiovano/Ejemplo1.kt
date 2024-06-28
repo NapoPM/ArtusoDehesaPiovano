@@ -20,7 +20,7 @@ class Ejemplo1 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ejemplo1)
-
+        //Botón para volver a la interfaz principal
         val buttonBack: Button = findViewById(R.id.buttonBack1)
         buttonBack.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
