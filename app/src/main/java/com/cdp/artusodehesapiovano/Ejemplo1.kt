@@ -48,6 +48,7 @@ class Ejemplo1 : AppCompatActivity() {
         setupRadioGroup()
     }
 
+    //El switch_italic le da formato italico al texto
     private fun setupItalicSwitch() {
         val italicSwitch: SwitchMaterial = findViewById(R.id.switch_italic_format)
 
@@ -56,7 +57,7 @@ class Ejemplo1 : AppCompatActivity() {
             text.setTypeface(null, typeface)
         }
     }
-
+    //El switch_color cambia el color al texto
     private fun setupHighlightedSwitch() {
         val colorSwitch: SwitchMaterial = findViewById(R.id.switch_color)
 
