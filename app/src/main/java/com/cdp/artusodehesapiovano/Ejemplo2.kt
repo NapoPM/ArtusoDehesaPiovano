@@ -40,7 +40,7 @@ class Ejemplo2 : AppCompatActivity() {
 
 
         checkboxSeleccion = findViewById(R.id.checkbox_marcado)
-
+        //Esto hace que aparezca "Botón ON" o "Botón OFF"
         val toggle: ToggleButton = findViewById(R.id.toggleButton)
         toggle.setOnCheckedChangeListener { _, isChecked ->
             Toast.makeText(this, if (isChecked) "Boton ON" else "Boton OFF", Toast.LENGTH_SHORT).show()
